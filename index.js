@@ -1,11 +1,9 @@
 import express from 'express';
+import router from './src/routes/index.js';
 
 const app = express();
 const PORT = 3000;
-
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+app.use(router)
 app.listen(PORT,() => {
     console.log('listening on');
 })
